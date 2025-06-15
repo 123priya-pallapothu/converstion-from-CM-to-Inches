@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet"href="converstion.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h2>CM to Inches Converter</h2>
+        <div>
+            
+            <input type="text" id="input" placeholder="length in cm" required>
+           
+       </div>
+       <div>
+            <button type="submit" id="btn"  onclick="change()">convert to inches</button>
+       </div><br>
+       <div id="result">
+
+       </div>
+    </div>
+    
+    <script>
+        function change(){
+        const m=Number(document.getElementById("input").value)
+        const inch=m/2.54
+        const ans=document.getElementById("result")
+        ans.innerHTML=inch.toFixed(2);
+        }
+        let a=document.getElementById("btn")
+        a.addEventListener("mouseover",(event)=>{
+            a.style.backgroundColor="green"
+        })
+        a.addEventListener("mouseout",(event)=>{
+            a.style.backgroundColor="bisque"
+        })
+    </script>
+    
+</body>
+</html>
